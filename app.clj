@@ -12,8 +12,7 @@
     (concat (take-while #(< % peak) v) [peak])))
 
 (defn rightOfPeak [v]
-   (let [peak (apply max v)]
-    (drop-while #(< % (apply max v)) v)))
+    (drop-while #(< % (apply max v)) v))
 
 (defn puddleVolume [v]
   (if (< (count v) 3)
